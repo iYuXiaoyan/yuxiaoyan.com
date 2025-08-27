@@ -1,0 +1,36 @@
+baseURL = "http://example.org/"
+languageCode = "zh-cn"
+title = "于小焱的个人门户"
+theme = "PaperMod"
+
+[params]
+  # 这是网站的描述
+  description = "探索海洋计量与数据智能的边界"
+  # 这是网站作者的名字
+  author = "于小焱"
+  # 默认的主题颜色 (auto, light, dark)
+  defaultTheme = "auto"
+  # 在文章末尾显示作者信息
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowReadingTime = true
+  ShowToc = true
+
+[menu]
+  [[menu.main]]
+    identifier = "archives"
+    name = "文章"
+    url = "/archives/"
+    weight = 10
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 30
