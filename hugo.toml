@@ -1,36 +1,75 @@
 baseURL = "https://yuxiaoyan.com/"
-languageCode = "zh-cn"
-title = "于小焱的个人门户"
 theme = "PaperMod"
+defaultContentLanguage = "zh"
 
+# ----------------------------------------------------
+# 全局参数 (Global Parameters)
+# ----------------------------------------------------
 [params]
-  # 这是网站的描述
-  description = "探索海洋计量与数据智能的边界"
-  # 这是网站作者的名字
   author = "于小焱"
-  # 默认的主题颜色 (auto, light, dark)
+  description = "一个关于海洋计量、数据智能和持续思考的数字花园"
   defaultTheme = "auto"
-  # 在文章末尾显示作者信息
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowReadingTime = true
   ShowToc = true
+  # 首页简介卡片 (默认中文版)
+  [params.homeInfoParams]
+    Title = "你好，我是于小焱 👋"
+    Content = "欢迎来到我的数字花园。在这里，我记录并分享关于海洋计量、数据智能、软件工程以及对这个世界持续的思考。希望我的探索，能为您带来一丝启发。"
 
-[menu]
-  [[menu.main]]
-    identifier = "archives"
-    name = "文章"
-    url = "/archives/"
-    weight = 10
-  [[menu.main]]
-    identifier = "search"
-    name = "搜索"
-    url = "/search/"
-    weight = 20
-  [[menu.main]]
-    identifier = "tags"
-    name = "标签"
-    url = "/tags/"
-    weight = 30
+# ----------------------------------------------------
+# 多语言配置 (Languages Configuration)
+# ----------------------------------------------------
+[languages]
+  # --- 中文配置 ---
+  [languages.zh]
+    contentDir = "content/zh"
+    languageCode = "zh-cn"
+    languageName = "中文"
+    title = "于小焱的数字花园"
+    weight = 1
+    # 中文菜单
+    [[languages.zh.menu.main]]
+      name = "文章"
+      url = "/archives/"
+      weight = 20
+    [[languages.zh.menu.main]]
+      name = "项目"
+      url = "/projects/"
+      weight = 30
+    [[languages.zh.menu.main]]
+      name = "关于"
+      url = "/about/"
+      weight = 40
+
+  # --- 英文配置 ---
+  [languages.en]
+    contentDir = "content/en"
+    languageCode = "en-us"
+    languageName = "English"
+    title = "Xiaoyan Yu's Digital Garden"
+    weight = 2
+    # 英文特定参数
+    [languages.en.params]
+      author = "Xiaoyan Yu"
+      description = "A digital garden about ocean metrology, data intelligence, and continuous thinking."
+      # 首页简介卡片 (英文版)
+      [languages.en.params.homeInfoParams]
+        Title = "Hi, I'm Xiaoyan Yu 👋"
+        Content = "Welcome to my digital garden. This is where I document and share my journey in ocean metrology, data intelligence, software engineering, and my continuous thinking about the world. I hope you find something inspiring here."
+    # 英文菜单
+    [[languages.en.menu.main]]
+      name = "Archives"
+      url = "/en/archives/"
+      weight = 20
+    [[languages.en.menu.main]]
+      name = "Projects"
+      url = "/en/projects/"
+      weight = 30
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/en/about/"
+      weight = 40
